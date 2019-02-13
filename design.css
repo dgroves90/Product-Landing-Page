@@ -6,15 +6,13 @@
 }
 
 body {
-	font-family: comic sans ms, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0px 10px 10px 10px;
 	background-color: #f6f6f6;
 
 }
 #header-top {
-	display: flex;
-	align-items: center;
-	justify-content: center;	
+	display: flex;		
 	padding: 10px;
 	background-color: #fff;
 	font-family: 'Roboto', sans-serif;
@@ -38,26 +36,27 @@ body {
 #nav-bar ul {
 	display:flex;
 	list-style: none;	
-	background-color: #ddd;		
+	background-color: #ddd;	
+	padding: 10px;	
 }
 
 #nav-bar li {
 	flex:1;	
-	text-align: center;
+	text-align: center;	
 }
 
 #nav-bar a {
+	padding: 0px 0px 0px 0px;
 	text-decoration: none;
-	padding-right:0;
-	color: #000;	
+	color: #000;
 }
 
 #nav-bar a:hover {
 	border:2px solid #8b9ab2;
-	padding: 0px 10px 0px 10px;
+	padding: 10px 40px 10px 40px;
 	border-radius: 10px;
 	text-transform: uppercase;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	font-weight: bold;
 }
 
@@ -80,6 +79,7 @@ form label {
 	margin-top: 15px;
 	font-size: 0.8rem;
 	border-radius: 10px;
+	font-weight: bold;
 }
 
 .button {
@@ -88,7 +88,7 @@ form label {
 	padding: 10px;
 	border-radius: 10px;
 	font-weight: bold;
-	font-family: comic sans ms, sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .button:hover {
@@ -110,7 +110,7 @@ form label {
 }
 
 
-#packages {
+#packages, #prices {
 	display: flex;
 }
 
@@ -122,7 +122,7 @@ form label {
 	color: #8b9ab2;
 }
 
-#package-1, #package-2, #package-3 {
+#package-1, #package-2, #package-3, #basicPrice, #standardPrice, #premiumPrice {
 	flex:1;
 	padding: 25px;
 	display: flex;
@@ -145,10 +145,43 @@ form label {
 
 }
 
+#price-section h1 {
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+	background-color: #bbb;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+#basicPrice {
+	background-color: #c48c3e;
+}
+#standardPrice {
+	background-color: #d3cdb1;
+}
+#premiumPrice {
+	background-color: #edd040;
+}
+
+
+
 footer {
 	font-family: sans-serif;
 	text-align: center;
 	padding: 30px 0px 20px 0px;
 	background-color: #f6f6f6;
 	font-size: 0.8rem;
+}
+
+@media (min-width: 800px) {
+	#nav-bar a:hover {
+		padding: 10px 80px 10px 80px;
+}
+#nav-bar a {
+	padding: 0px 100px 0px 100px;
+}
+#header-top {
+	font-size: 1.5rem;
+	align-items: center;
+}
 }
