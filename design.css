@@ -20,7 +20,7 @@ body {
 	text-align: center;	
 }
 
-#header-image {
+#header-img {
 	flex:1;
 }
 
@@ -155,14 +155,49 @@ form label {
 
 #basicPrice {
 	background-color: #c48c3e;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
 }
 #standardPrice {
 	background-color: #d3cdb1;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
 }
 #premiumPrice {
 	background-color: #edd040;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
 }
 
+#sample-section {
+	display: flex;
+	flex-direction: row;
+}
+
+#sample1 {
+	flex:1;
+}
+#sample2 {
+	flex:1;
+}
+#sample3 {
+	flex:1;
+}
+
+#sample-section img {
+	width: 100%;	
+}
+
+#samples-title {
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+	background-color: #bbb;
+	font-size: 3rem;
+	font-weight: bold;
+}
 
 
 footer {
@@ -183,5 +218,21 @@ footer {
 #header-top {
 	font-size: 1.5rem;
 	align-items: center;
+}
+}
+
+@media (max-width: 700px) {
+#packages, #prices {
+	display: inline-block;
+}
+#prices {
+	margin: auto;
+	width: 100%;
+}
+#basicPrice, #standardPrice, #premiumPrice {
+	height: 20vh;
+}
+#sample-section {
+	display: inline-block;
 }
 }

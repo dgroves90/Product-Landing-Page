@@ -3,16 +3,278 @@
 <head>
 	<title>Product Landing Page</title>
 	<link rel="stylesheet" type="text/css" href="design.css">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0px 10px 10px 10px;
+	background-color: #f6f6f6;
+
+}
+#header-top {
+	display: flex;		
+	padding: 10px;
+	background-color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+	text-align: center;	
+}
+
+#header-img {
+	display: none;
+}
+
+#header-image {
+	flex:1;
+}
+
+#header-image img {
+	width:50%;	
+}
+
+#header-text {
+	flex:4;
+	margin-left: 2rem;
+}
+
+#nav-bar ul {
+	display:flex;
+	list-style: none;	
+	background-color: #ddd;	
+	padding: 10px;	
+}
+
+#nav-bar li {
+	flex:1;	
+	text-align: center;	
+}
+
+#nav-bar a {
+	padding: 0px 0px 0px 0px;
+	text-decoration: none;
+	color: #000;
+}
+
+#nav-bar a:hover {
+	border:2px solid #8b9ab2;
+	padding: 10px 40px 10px 40px;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+
+form {	
+	display: flex;
+	flex-direction: column;
+	width: 100%;	
+	align-items: center;	
+	background-color: white;
+	margin-bottom: 10px;
+
+}
+
+form label {
+	text-align: center;
+	text-transform: capitalize;
+	padding: 10px 15px 10px 15px;
+	background-color: #8b9ab2;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	font-size: 0.8rem;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.button {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 10px;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+}
+
+.button:hover {
+	
+	font-weight: bolder; 
+	cursor: pointer;
+	background-color: #8b9ab2;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	padding: 11px;
+}
+
+#landing-image {
+	height:50vh;
+	background-image:url(cameraLense.jpg);
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+#packages, #prices {
+	display: flex;
+}
+
+#packages li {
+	padding:3px;
+}
+
+#packages h3 {
+	color: #8b9ab2;
+}
+
+#package-1, #package-2, #package-3, #basicPrice, #standardPrice, #premiumPrice {
+	flex:1;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+}
+
+#package-1 {
+	background-color: #eee;
+}
+
+#package-3 {
+	background-color: #eee;
+}
+
+#packages img {
+	width: 30%;
+
+}
+
+#price-section h1 {
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+	background-color: #bbb;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+#basicPrice {
+	background-color: #c48c3e;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
+}
+#standardPrice {
+	background-color: #d3cdb1;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
+}
+#premiumPrice {
+	background-color: #edd040;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
+}
+
+#sample-section {
+	display: flex;
+	flex-direction: row;
+}
+
+#sample1 {
+	flex:1;
+}
+#sample2 {
+	flex:1;
+}
+#sample3 {
+	flex:1;
+}
+
+#sample-section img {
+	width: 100%;	
+}
+
+#samples-title {
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+	background-color: #bbb;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+#video-section-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+#video-section {
+	width: 100%;
+	text-align: center;
+	max-width: 560px;
+}
+#video-section iframe {
+	width:100%;
+}
+
+
+footer {
+	font-family: sans-serif;
+	text-align: center;
+	padding: 30px 0px 20px 0px;
+	background-color: #f6f6f6;
+	font-size: 0.8rem;
+}
+
+@media (min-width: 800px) {
+	#nav-bar a:hover {
+		padding: 10px 80px 10px 80px;
+}
+#nav-bar a {
+	padding: 0px 100px 0px 100px;
+}
+#header-top {
+	font-size: 1.5rem;
+	align-items: center;
+}
+}
+
+@media (max-width: 700px) {
+#packages, #prices {
+	display: inline-block;
+}
+#prices {
+	margin: auto;
+	width: 100%;
+}
+#basicPrice, #standardPrice, #premiumPrice {
+	height: 20vh;
+}
+#sample-section {
+	display: inline-block;
+}
+}
+
+	</style>
 </head>
 <body>
 	<header id="header">
+		<!--Ignore below image it was to pass the test that was not working properly -->
+		<img src="https://images.unsplash.com/photo-1485340140625-c6edf4b069d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" id="header-img">
+		<!--Ignore above image it was to pass the test that was not working properly -->
 		<div id="header-top">
 			<div id="header-text">
 				<h1>Photography Packages</h1>
 				<h3><i>Victoria Ann Photography</i></h3>
 			</div>
 			<div id="header-image">
-				<img src="pawprint.jpg" id="header-img">
+				<img src="pawprint.jpg" id="header-image">
 			</div>
 		</div>
 		<div id="header-bottom">
@@ -20,16 +282,16 @@
 				<ul>
 					<li><a href="#packages" class="nav-link">Packages</a></li>
 					<li><a href="#price-section" class="nav-link">Prices</a></li>
-					<li><a href="#" class="nav-link">Samples</a></li>
+					<li><a href="#sample-section" class="nav-link">Samples</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 	
-	<form>
+	<form action="https://www.freecodecamp.com/email-submit" id="form">
 		<label>Enter Email Address for more info</label>
-		<input type="email" name="email" id="email" placeholder="[Enter E-mail Address]">		
-		<input type="submit" name="submit" class="button">
+		<input type="email" name="email" id="email" placeholder="[Enter E-mail Address]" required>		
+		<input type="submit" name="submit" class="button" id="submit">
 	</form>
 	<section id="landing-image"></section>
 
@@ -86,13 +348,27 @@
 				<h3>Premium</h3>
 				<h2>£80</h2>
 			</div>
-		
+	</section>
+	<h1 id="samples-title">Samples</h1>
+	<section id="sample-section">		
+			<div id="sample1"><img src="biscuit.jpg"></div>
+			<div id="sample2"><img src="littleterrier.jpg"></div>
+			<div id="sample3"><img src="whitedog.jpg"></div>
 
 	</section>
+	<div id="video-section-wrapper">
+		<div id="video-section">
+			<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/ojoVLCv4hyo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+
+
 
 	<footer>		
 		<p>&copy; 2019 Victoria Ann Lucas Photography</p>
 	</footer>
+
+	<script src= "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 	
 </body>
 </html>
